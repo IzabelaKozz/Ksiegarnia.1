@@ -1,0 +1,30 @@
+﻿@model Ksiegarnia.Models.Book
+
+<h1>Edit Book</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="BookId" />
+    <div>
+        <label asp-for="Title"></label>
+        <input asp-for="Title" />
+    </div>
+    <div>
+        <label asp-for="Author"></label>
+        <input asp-for="Author" />
+    </div>
+    <div>
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description"></textarea>
+    </div>
+    <div>
+        <label asp-for="Price"></label>
+        <input asp-for="Price" />
+    </div>
+    <div>
+        <label asp-for="CoverImage"></label>
+        <input asp-for="CoverImage" />
+    </div>
+    <button type="submit">Update Book</button>
+</form>
+
+<a asp-action="Index">Back to List</a>
